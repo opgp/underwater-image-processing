@@ -1,0 +1,13 @@
+C. Ancuti, C. O. Ancuti, and P. Bekaert, "Enhancing underwater images and videos by fusion", in Proc. of IEEE Int. Conf. Comput. Vis. Pattern Rec. (CVPR), 2012, pp. 81-88.
+C. Li, J. Guo, R. Cong, et al., “Underwater image enhancement by dehazing with minimum information loss and histogram distribution prior,” IEEE Trans. Image Process., vol. 25, no. 12, pp.5664-5677, 2016.
+Y. Peng and P. Cosman, “Underwater image restoration based on image blurriness and light absorption”, IEEE Trans. Image Process., vol. 26, no. 4, pp.1579-1594, 2017.
+Y. Peng, T. Cao, and P. Cosman, "Generalization of the dark channel prior for single image restoration", IEEE Trans. Image Process., vol. 27, no. 6, pp. 2856-2868, 2018.
+C. Li, J. Guo, C. Guo, et al., "A hybrid method for underwater image correction", Pattern Rec. Lett., vol. 94, pp. 62-67, 2017.
+A. Galdran, D. Pardo, and A. Picn, "Automatic Red-Channel underwater image restoration", J. Vis. Commu. and Image Repre., vol. 26, pp. 132-145, 2015.
+X. Fu, Z. Fan, and M. Ling, "Two-step approach for single underwater image enhancement", in Symposium. of IEEE Intell. Signal Process. Commun. Syst., 2017, pp. 789-794.
+X. Fu, P. Zhang, Y. Huang, et al., "A retinex-based enhancing approach for single underwater image", in Proc. of IEEE Int. Conf. Image Process. (ICIP), 2014, pp. 4572-4576.
+P. Drews-Jr, E. Nascimento, S. Botelho, et al, "Underwater depth estimation and image restoration based on single images", IEEE Comput. Graph. Appl., vol. 36, no. 2, pp. 24-35, 2016.
+K. He, J. Sun, and X. Tang, "Single image haze removal using dark channel prior", IEEE Trans. Pattern Anal. Mach. Intell., vol. 33, no. 12, pp. 2341-2353, 2011.
+W. Ren, S. Liu, H. Zhang, et al., "Single image dehazing via multi-scale convolutional neural networks", in Proc. of Eur. Conf. Comput. Vis. (ECCV), 2016, pp. 154-169.
+A. Ghani and N. Isa, "Underwater image quality enhancement through integrated color model with Rayleigh distribution, Appl. Soft Comput., vol. 27, pp. 219-230, 2015.
+A. Ghani and N. Isa, "Enhancement of low quality underwater image through integrated global and local contrast correction, Appl. Soft Comput., vol. 37, pp. 332-344, 2015.
