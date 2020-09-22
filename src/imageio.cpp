@@ -17,3 +17,9 @@ Mat getImage (char* imgNum, char* type, bool color = 1)
 
   return image;
 }
+
+void showImage (string name, Mat image)
+{
+  namedWindow( name, WINDOW_AUTOSIZE );
+  imshow(name, image );
+}
