@@ -11,3 +11,16 @@ K. He, J. Sun, and X. Tang, "Single image haze removal using dark channel prior"
 W. Ren, S. Liu, H. Zhang, et al., "Single image dehazing via multi-scale convolutional neural networks", in Proc. of Eur. Conf. Comput. Vis. (ECCV), 2016, pp. 154-169.
 A. Ghani and N. Isa, "Underwater image quality enhancement through integrated color model with Rayleigh distribution, Appl. Soft Comput., vol. 27, pp. 219-230, 2015.
 A. Ghani and N. Isa, "Enhancement of low quality underwater image through integrated global and local contrast correction, Appl. Soft Comput., vol. 37, pp. 332-344, 2015.
+
+
+Benchmarking: https://github.com/andrewekhalel/sewar
+[1] "Image quality assessment: from error visibility to structural similarity." 2004)
+[2] "A universal image quality index." (2002)
+[3] "Multiscale structural similarity for image quality assessment." (2003)
+[4] "Quality of high resolution synthesised images: Is there a simple criterion?." (2000)
+[5] "A wavelet transform method to merge Landsat TM and SPOT panchromatic data." (1998)
+[6] "Fusion of multispectral and panchromatic images using improved IHS and PCA mergers based on wavelet decomposition." (2004)
+[7] "Discrimination among semi-arid landscape endmembers using the spectral angle mapper (SAM) algorithm." (1992)
+[8] "Multispectral and panchromatic data fusion assessment without reference." (2008)
+[9] "Image information and visual quality." (2006)
+[10] "Quality Assessment of Deblocked Images" (2011)
