@@ -1,5 +1,6 @@
 #ifndef imageio
 #define imageio
+
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include "opencv2/imgproc/imgproc.hpp"
@@ -18,6 +19,7 @@ Mat getImage (char* imgNum, char* type, bool color = 1)
     cout << "Image not found or unable to open at " << imagePath << endl;
     exit(-1);
   }
+
   resize (image, image, Size(640, 480), 0, 0, INTER_CUBIC);
 
   return image;
