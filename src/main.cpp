@@ -15,6 +15,7 @@ int main( int argc, char** argv ) {
   enhance (image);
 
   showImage("enhanced", image);
+
   waitKey(0);
   return 0;
 }
