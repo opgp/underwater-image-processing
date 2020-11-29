@@ -6,6 +6,9 @@
 #include <iostream>
 #include "opencv2/imgproc/imgproc.hpp"
 // #include "imageio.h"
+#include <opencv2/xphoto/white_balance.hpp>
+
+
 
 using namespace std;
 using namespace cv;
@@ -40,8 +43,6 @@ void enhance(Mat src)
 
   //Applying Clahe on Y channel
   clahe->apply(ycbcr[0], ycbcr[0]);
-  // clahe->apply(ycbcr[1], ycbcr[1]);
-  // clahe->apply(ycbcr[2], ycbcr[2]);
 
 
   merge(ycbcr, src);
@@ -51,6 +52,13 @@ void enhance(Mat src)
 
   // Conversion back to BGR
   cvtColor(src, src, CV_YCrCb2BGR);
+}
+
+void whiteBalancing(Mat src)
+{
+  Ptr<xphoto::WhiteBalancer> wb;
+  wb = xphoto::createSimpleWB();
+  wb->balanceWhite (src, src);
 }
 
 /* Put this in your main function
