@@ -13,7 +13,7 @@ Run the following command on your terminal
 git clone git@github.com:opgp/underwater-image-processing.git
 cd underwater-image-processing/src
 mkdir dataset dataset/raw dataset/reference dataset/challenging dataset/results
-echo "alias oc=\"g++ main.cpp -std=c++11 \`pkg-config --cflags --libs opencv\` && time ./a.out\"" >> ~/.bashrc
+echo "alias enhance=\"g++ main.cpp -std=c++11 \`pkg-config --cflags --libs opencv\` && time ./a.out\"" >> ~/.bashrc
 ```
 
 ### Dataset 
@@ -26,12 +26,12 @@ Extract the zip files into their respective folders in src/dataset.
 ## Executing
 ### Enhancing an Image
 ```
-oc <path to image> 
+enhance <path to image> 
 ```
 ### Example
 After downloading the datasets.
 ```
-oc dataset/raw/2_img_.png
+enhance dataset/raw/2_img_.png
 ```
 ### Evaluation
 Coming soon
