@@ -2,7 +2,7 @@
 Underwater image enhancement written in C++ for real time and online applications.
 
 ## Dependencies
-OpenCV 3.2.0
+OpenCV 3.2.0, Follow the tutorial [here](https://www.learnopencv.com/install-opencv-3-4-4-on-ubuntu-18-04/).
 ### Python Dependencies
 ```
 pip install sewar
