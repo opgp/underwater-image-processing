@@ -24,3 +24,6 @@ Benchmarking: https://github.com/andrewekhalel/sewar
 [8] "Multispectral and panchromatic data fusion assessment without reference." (2008)
 [9] "Image information and visual quality." (2006)
 [10] "Quality Assessment of Deblocked Images" (2011)
+
+For UIQM Implementation
+https://ieeexplore.ieee.org/document/7305804?arnumber=7305804
