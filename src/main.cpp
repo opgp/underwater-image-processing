@@ -38,7 +38,8 @@ int main( int argc, char** argv ) {
   showImage("enhanced", image);
   imwrite (output + "enhanced.png", image);
 
-  uiqm(output, argv[2]);
+  // uiqm(output, argv[2]);
+  rEval(argv[2], argv[1]);
 
   waitKey(0);
   return 0;
