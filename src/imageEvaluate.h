@@ -60,4 +60,9 @@ void rEval(char* imgName, char* type)
 
 }
 
+void uiqm (string path)
+{
+  cout << execute ("./UIQM " + path);
+}
+
 #endif

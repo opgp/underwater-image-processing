@@ -8,8 +8,6 @@
 // #include "imageio.h"
 #include <opencv2/xphoto/white_balance.hpp>
 
-
-
 using namespace std;
 using namespace cv;
 
@@ -52,6 +50,8 @@ void enhance(Mat src)
 
   // Conversion back to BGR
   cvtColor(src, src, CV_YCrCb2BGR);
+
+
 }
 
 void whiteBalancing(Mat src)
