@@ -32,8 +32,8 @@ string execute(string str)
 void rEval(char* imgName, char* type)
 {
   // Create paths for orignial and reference images
-  string original = "./dataset/" + string(type) + "/" + string(imgName) + ".png";
-  string reference = "./dataset/reference/" + string(imgName) + ".png";
+  string original = "./dataset/results/original.png";
+  string reference = "./dataset/results/reference.png";
 
   // Metrics avalailable in sewar library
   // refer https://github.com/andrewekhalel/sewar
@@ -44,7 +44,7 @@ void rEval(char* imgName, char* type)
     // "rmse",
     // "sw",
     // "uqi",
-    // "ssim",
+    "ssim",
     // "ergas",
     // "scc",
     // "rase",
