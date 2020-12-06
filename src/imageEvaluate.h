@@ -1,6 +1,8 @@
 #ifndef imageEvaluate
 #define imageEvaluate
 #include <bits/stdc++.h>
+#include "imageio.h"
+
 
 using namespace std;
 
@@ -29,7 +31,7 @@ string execute(string str)
   return output;
 }
 
-void rEval(char* imgName, char* type)
+void rEval()
 {
   // Create paths for orignial and reference images
   string original = "./dataset/results/original.png";
@@ -60,11 +62,17 @@ void rEval(char* imgName, char* type)
 
 }
 
-void uiqm (string path, char* imgName)
+void updateReferenceImage(string path, string output)
 {
-  string referenceImage = "./dataset/reference/" + string(imgName) + ".png";
-  execute ("cp " + referenceImage + " " + path + "reference.png");
-  cout << execute ("./UIQM " + path);
+  string imgName = extractImageName(path);
+  string referenceImage = "./dataset/reference/" + imgName;
+  execute ("cp " + referenceImage + " " + output + "reference.png");
+}
+
+
+void uiqm (string output)
+{
+  cout << execute ("./UIQM " + output);
 }
 
 #endif
