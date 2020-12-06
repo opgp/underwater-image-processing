@@ -20,7 +20,7 @@ echo "alias enhance=\"g++ main.cpp -std=c++11 \`pkg-config --cflags --libs openc
 Add these lines to ~/.bashrc, to run any openCV cpp file directly by `ocv <filename>.cpp`
 ```
 function ocv () {
-	echo "$1"
+	echo "Running $1..."
 	g++ "$1" -std=c++11 `pkg-config --cflags --libs opencv` && time ./a.out "$2"
 }
 export -f ocv
