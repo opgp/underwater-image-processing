@@ -16,6 +16,16 @@ mkdir dataset dataset/raw dataset/reference dataset/challenging dataset/results
 echo "alias enhance=\"g++ main.cpp -std=c++11 \`pkg-config --cflags --libs opencv\` && time ./a.out\"" >> ~/.bashrc
 ```
 
+### OpenCV Function (optional)
+Add these lines to ~/.bashrc, to run any openCV cpp file directly by `ocv <filename>.cpp`
+```
+function ocv () {
+	echo "$1"
+	g++ "$1" -std=c++11 `pkg-config --cflags --libs opencv` && time ./a.out "$2"
+}
+export -f ocv
+```
+
 ### Dataset 
 UIEB Dataset based on [this paper](http://https://ieeexplore.ieee.org/document/8917818 "this paper")  is used for benchmarking.
 
