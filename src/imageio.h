@@ -13,17 +13,18 @@ using namespace cv;
 Mat getImage (char* imgNum, char* type, bool color = 1)
 {
   string imagePath = "./dataset/" + string(type) + "/" + string(imgNum) + ".png";
-  Mat image = imread (imagePath, IMREAD_COLOR);
+  Mat image = imread (imagePath);
 
   if(image.empty()) {
     cout << "Image not found or unable to open at " << imagePath << endl;
     exit(-1);
   }
-
-  resize (image, image, Size(640, 480), 0, 0, INTER_CUBIC);
+  
+  // resize (image, image, Size(640, 480), 0, 0, INTER_CUBIC);
 
   return image;
 }
+
 
 void showImage (string name, Mat image)
 {
