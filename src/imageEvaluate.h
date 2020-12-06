@@ -60,8 +60,10 @@ void rEval(char* imgName, char* type)
 
 }
 
-void uiqm (string path)
+void uiqm (string path, char* imgName)
 {
+  string referenceImage = "./dataset/reference/" + string(imgName) + ".png";
+  execute ("cp " + referenceImage + " " + path + "reference.png");
   cout << execute ("./UIQM " + path);
 }
 

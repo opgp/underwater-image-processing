@@ -20,7 +20,7 @@ void enhance(Mat src)
 
   // Equalizes the histogram of a one channel image  (8UC1)
   // using Contrast Limited Adaptive Histogram Equalization.
-  cv::Ptr<cv::CLAHE> clahe = cv::createCLAHE();
+  Ptr<CLAHE> clahe = cv::createCLAHE();
   clahe->setClipLimit(1);
 
   clahe->apply(BGR[0], BGR[0]);
@@ -58,6 +58,8 @@ void whiteBalancing(Mat src)
 {
   Ptr<xphoto::WhiteBalancer> wb;
   wb = xphoto::createSimpleWB();
+  // wb = xphoto::createGrayworldWB();
+
   wb->balanceWhite (src, src);
 }
 
