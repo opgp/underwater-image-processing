@@ -12,7 +12,7 @@ Run the following command on your terminal
 ```
 git clone https://github.com/opgp/underwater-image-processing.git
 cd underwater-image-processing/src
-mkdir dataset dataset/raw dataset/reference dataset/challenging dataset/results
+mkdir src/dataset src/dataset/raw src/dataset/reference src/dataset/challenging src/dataset/results
 echo "alias enhance=\"g++ main.cpp -std=c++11 \`pkg-config --cflags --libs opencv\` && time ./a.out\"" >> ~/.bashrc
 ```
 
@@ -31,7 +31,7 @@ UIEB Dataset based on [this paper](http://https://ieeexplore.ieee.org/document/8
 
 Download Raw Images from [here](http://https://drive.google.com/open?id=12W_kkblc2Vryb9zHQ6BfGQ_NKUfXYk13 "here").
 
-Download Challenging Images from [here](https://drive.google.com/open?id=1Ew_r83nXzVk0hlkfuomWqsAIxuq6kaN4http:// "here").
+Download Challenging Images from [here](https://drive.google.com/open?id=1Ew_r83nXzVk0hlkfuomWqsAIxuq6kaN4 "here").
 
 Download Reference Images from [here](http://https://drive.google.com/open?id=1cA-8CzajnVEL4feBRKdBxjEe6hwql6Z7 "here").
 
