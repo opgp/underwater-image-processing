@@ -39,9 +39,9 @@ int main( int argc, char** argv ) {
   imwrite (output + "enhanced.png", image);
 
   // EVALUATIONS
-  uiqm(output);
-  updateReferenceImage(imagePath, output);
-  rEval();
+  // uiqm(output);
+  // updateReferenceImage(imagePath, output);
+  // rEval();
 
 
   waitKey(0);
