@@ -23,10 +23,8 @@ string execute(string str)
   // Reading std output and storing in a string
   string output;
   while (fread(&c, sizeof c, 1, fpipe))
-  {
       output += c;
-  }
-
+  
   pclose(fpipe);
   return output;
 }
