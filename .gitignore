@@ -1,4 +1,7 @@
 /src/dataset/
 /src/a.out
 **.o
+<<<<<<< HEAD
 **.h.gch
+=======
+>>>>>>> 850f7191cfe2b8744745226c09842b5b344b0653
