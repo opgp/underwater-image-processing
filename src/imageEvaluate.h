@@ -23,15 +23,13 @@ string execute(string str)
   // Reading std output and storing in a string
   string output;
   while (fread(&c, sizeof c, 1, fpipe))
-  {
       output += c;
-  }
 
   pclose(fpipe);
   return output;
 }
 
-void rEval()
+void ReferenceMetrics()
 {
   // Create paths for orignial and reference images
   string original = "./dataset/results/original.png";
@@ -59,7 +57,6 @@ void rEval()
 
   for (auto metric: metrics)
     cout << execute ("sewar " + metric + " " + reference + " " + original) << endl;
-
 }
 
 void updateReferenceImage(string path, string output)
@@ -70,9 +67,9 @@ void updateReferenceImage(string path, string output)
 }
 
 
-void uiqm (string output)
+string uiqm (string output)
 {
-  cout << execute ("./UIQM " + output);
+  return execute ("./UIQM " + output);
 }
 
 #endif
