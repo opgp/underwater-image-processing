@@ -31,11 +31,11 @@ double writeImage (string imagePath, string name)
 
   return duration.count()/1e6;
 }
+
 int main( int argc, char** argv ) {
   // Take input of image
   string imagePath = argv[1];
   vector <string> files = getFileNames (argv[1]);
-  files.erase(files.begin(),files.begin()+2);
 
   double totalTimeTaken = 0;
   double countImages = 0;
