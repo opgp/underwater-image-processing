@@ -1,3 +1,10 @@
-Average UIQM Value for UIEB = 1.77022
-Average UCIQE Value: 0.647107
+Underwater Image Enhancement Benchmarking
 
+Non Reference Metrics
+Average UIQM Value  : 1.77022
+Average UCIQE Value : 0.647107
+
+Reference Metrics
+MSE : 1101.36
+PSNR : 18.5279
+SSIM : 0.786558
