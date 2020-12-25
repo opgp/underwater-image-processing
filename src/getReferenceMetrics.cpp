@@ -9,7 +9,8 @@ using namespace std::chrono;
 using namespace std;
 using namespace cv;
 
-const string output = "./dataset/results/";
+const string referenceImages = "./dataset/reference/";
+const string rawImages = "./dataset/results/";
 
 
 int main( int argc, char** argv ) {
@@ -17,16 +18,39 @@ int main( int argc, char** argv ) {
   string imagePath = argv[1];
   vector <string> files = getFileNames (argv[1]);
 
-  double totalTimeTaken = 0;
-  double countImages = 0;
-
+  double mse = 0.0, psnr = 0.0, ssim = 0.0;
+  int totalImages = 0;
   for (auto img: files)
   {
-    countImages++;
-    cout << "\r Processing: " << img << " | " << "Completed Images (" << countImages << "/" << files.size() << ")";
+    int flag1 = 0,flag2 = 0;
+    totalImages++;
+    vector<string> cur = ReferenceMetrics(referenceImages+img,rawImages+img);
+    // cout<<referenceImages+img<<" "<<rawImages+img<<endl;
+    for(auto str:cur) {
+      replace(str.begin(),str.end(),'(',' ');
+      replace(str.begin(),str.end(),',',' ');
+      replace(str.begin(),str.end(),')',' ');
+      stringstream ss(str);
+      string type, waste;
+      double value;
+      ss>>type>>waste>>value;
+      if(flag1 == 0 && flag2 == 0) {
+        mse += value;
+        flag1 = 1;
+      } else if(flag1 == 1 && flag2 == 0) {
+        psnr += value;
+        flag2 = 1;
+      } else {
+        ssim += value;
+        flag1 = 0;
+        flag2 = 0;
+      }
+      cout<<str<<" "<<type<<" "<<value<<endl;
+    }
+    cout<<"completed "<<totalImages<<" out of "<<files.size()<<endl;
   }
-
-  cout << "\n Average Runtime: " << totalTimeTaken/countImages << endl;
-
+  cout<<"mse"<<" : "<<mse/totalImages<<endl;
+  cout<<"psnr"<<" : "<<psnr/totalImages<<endl;
+  cout<<"ssim"<<" : "<<ssim/totalImages<<endl;
   return 0;
 }

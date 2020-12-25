@@ -29,11 +29,9 @@ string execute(string str)
   return output;
 }
 
-void ReferenceMetrics()
+vector<string> ReferenceMetrics(string original, string reference)
 {
   // Create paths for orignial and reference images
-  string original = "./dataset/results/original.png";
-  string reference = "./dataset/results/reference.png";
 
   // Metrics avalailable in sewar library
   // refer https://github.com/andrewekhalel/sewar
@@ -53,9 +51,12 @@ void ReferenceMetrics()
     // "vifp",
     // "psnrb"
   };
+  vector<string> results;
 
   for (auto metric: metrics)
-    cout << execute ("sewar " + metric + " " + reference + " " + original) << endl;
+    results.push_back(execute ("sewar " + metric + " " + reference + " " + original));
+
+  return results;
 }
 
 string uiqm (string output)
@@ -75,7 +76,7 @@ string uiqm (string output)
   Sept. 2018
   Modified at Dec. 2019
 */
-double getUCIQE (string imgPath)
+void getUCIQE (string imgPath)
 {
   Mat img = getImage(imgPath);
 
