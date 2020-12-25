@@ -11,7 +11,7 @@ pip install sewar
 Run the following command on your terminal
 ```
 git clone https://github.com/opgp/underwater-image-processing.git
-cd underwater-image-processing/src
+cd underwater-image-processing/
 mkdir src/dataset src/dataset/raw src/dataset/reference src/dataset/challenging src/dataset/results
 echo "alias enhance=\"g++ main.cpp -std=c++11 \`pkg-config --cflags --libs opencv\` && time ./a.out\"" >> ~/.bashrc
 ```
