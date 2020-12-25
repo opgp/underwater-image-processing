@@ -2,7 +2,9 @@
 #define imageEvaluate
 #include <bits/stdc++.h>
 #include "imageio.h"
-
+#ifdef XENON
+#include <debug.h>
+#endif
 using namespace std;
 
 string execute(string str)
@@ -88,24 +90,24 @@ double getUCIQE (string imgPath)
 
   double chromaSum = 0;
   double chromaVairanceSum = 0;
-  double saturationSum = 0.0;
+  double saturationSum = 0;
   double pixels = 0;
   double minL = INT_MAX, maxL = 0;
 
-  vector <vector <vector <double>>> values (imgLab.rows, vector <vector <double>>(imgLab.cols) );
+  vector <vector <vector <int>>> values (imgLab.rows, vector <vector <int>>(imgLab.cols) );
 
   for (int i = 0; i < imgLab.rows; i++)
     for (int j = 0; j < imgLab.cols; j++)
     {
       Vec3b lb = imgLab.at<Vec3b>(i,j);
-      vector <double> lab = {double(lb[0])/255.0, double(lb[0])/255.0, double(lb[0])/255.0};
+      vector <int> lab = {lb[0], lb[1], lb[2]};
       chromaSum += sqrt (lab[1]*lab[1] + lab[2]*lab[2]);
 
       values[i][j] = lab;
       pixels++;
 
-      minL = min (minL, double(lab[0]));
-      maxL = max (maxL, double(lab[0]));
+      minL = min (minL, double (lab[0]));
+      maxL = max (maxL, double (lab[0]));
     }
 
   // Average of Chroma
@@ -114,11 +116,11 @@ double getUCIQE (string imgPath)
   for (int i = 0; i < imgLab.rows; i++)
     for (int j = 0; j < imgLab.cols; j++)
     {
-      vector <double> lab = values[i][j];
+      vector <int> lab = values[i][j];
       double chroma = sqrt (lab[1]*lab[1] + lab[2]*lab[2]);
 
-      if (lab[0] > 0)
-        saturationSum += chroma/sqrt (chroma*chroma + lab[0]*lab[0]);
+      saturationSum += chroma/double(lab[0]);
+
       chromaVairanceSum += chroma * chroma - u_c*u_c;
     }
 
@@ -130,7 +132,6 @@ double getUCIQE (string imgPath)
 
   // Average of Saturation
   double u_s = saturationSum/pixels;
-
 
   double UCIQE = c1 * sigma_c + c2 * contrast_l + c3 * u_s;
   return UCIQE;
