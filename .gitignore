@@ -1,3 +1,4 @@
 /src/dataset/
 /src/a.out
 **.o
+**.h.gch
