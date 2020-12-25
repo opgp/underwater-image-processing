@@ -31,34 +31,18 @@ double writeImage (string imagePath, string name)
 
   return duration.count()/1e6;
 }
-
-vector <string> getFileNames (char* imgPath)
-{
-  DIR *dir; struct dirent *diread;
-  vector<string> files;
-
-  if ((dir = opendir(imgPath)) != NULL) {
-    while ((diread = readdir(dir)) != NULL) {
-      files.push_back(diread->d_name);
-    }
-    closedir (dir);
-  } else {
-    perror ("Directory not found!!");
-    exit(1);
-  }
-  return files;
-}
-
 int main( int argc, char** argv ) {
   // Take input of image
   string imagePath = argv[1];
   vector <string> files = getFileNames (argv[1]);
+  files.erase(files.begin(),files.begin()+2);
 
   double totalTimeTaken = 0;
   double countImages = 0;
 
   for (auto img: files)
   {
+    // cout<<img<<" "<<endl;
     try{
       totalTimeTaken += writeImage(imagePath, img);
     }
