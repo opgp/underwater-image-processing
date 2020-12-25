@@ -28,7 +28,7 @@ Mat getImage (string imagePath, bool color = 1)
     exit(-1);
   }
 
-  // resize (image, image, Size(640, 480), 0, 0, INTER_CUBIC);
+  resize (image, image, Size(640, 480), 0, 0, INTER_CUBIC);
 
   return image;
 }
