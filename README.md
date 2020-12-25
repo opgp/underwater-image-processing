@@ -46,5 +46,23 @@ After downloading the datasets.
 ```
 enhance dataset/raw/2_img_.png
 ```
-### Evaluation
-Coming soon
+## Evaluation
+### Generate Results
+Enhance all the images in a folder and store them to dataset/results/
+```
+ocv generateResults.cpp dataset/raw/
+```
+### Calculate Reference Metrics
+Reference Metrics such as MSE, SSIM, PSNR can be calculated for all images in the results folder as follows
+```
+ocv getReferenceMetrics.cpp dataset/results/
+```
+This will use reference images stored at dataset/results/references
+### Non Reference Metrics
+#### UCIQE
+Run the following command to calculate average UCIQE of all the images stored in dataset/results
+```
+ocv uciqe.cpp dataset/results/
+```
+#### UQIM
+Coming Soon
