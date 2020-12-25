@@ -1,2 +1,3 @@
 Average UIQM Value for UIEB = 1.77022
+Average UCIQE Value: 0.647107
 
