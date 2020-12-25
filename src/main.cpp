@@ -19,7 +19,6 @@ int main( int argc, char** argv ) {
 
   // Show and write original image
   showImage("normal", image);
-  imwrite (output + "original.png", image);
 
   // Start calculating time
   auto start = high_resolution_clock::now();
@@ -36,7 +35,6 @@ int main( int argc, char** argv ) {
 
   // Show and write Final image
   showImage("enhanced", image);
-  imwrite (output + "enhanced.png", image);
 
   // EVALUATIONS
   // uiqm(output);
