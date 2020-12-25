@@ -26,7 +26,7 @@ function ocv () {
 export -f ocv
 ```
 
-### Dataset 
+### Dataset
 UIEB Dataset based on [this paper](http://https://ieeexplore.ieee.org/document/8917818 "this paper")  is used for benchmarking.
 
 Download Raw Images from [here](http://drive.google.com/open?id=12W_kkblc2Vryb9zHQ6BfGQ_NKUfXYk13 "here").
@@ -39,7 +39,7 @@ Extract the zip files into their respective folders in src/dataset.
 ## Executing
 ### Enhancing an Image
 ```
-enhance <path to image> 
+enhance <path to image>
 ```
 ### Example
 After downloading the datasets.
