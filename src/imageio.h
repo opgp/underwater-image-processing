@@ -5,6 +5,8 @@
 #include <opencv2/highgui/highgui.hpp>
 #include "opencv2/imgproc/imgproc.hpp"
 #include <bits/stdc++.h>
+#include <dirent.h>
+
 
 using namespace std;
 using namespace cv;
@@ -38,5 +40,22 @@ void showImage (string path, Mat image)
   string name = extractImageName (string(path));
   namedWindow( name, WINDOW_AUTOSIZE );
   imshow(name, image );
+}
+
+vector <string> getFileNames (char* imgPath)
+{
+  DIR *dir; struct dirent *diread;
+  vector<string> files;
+
+  if ((dir = opendir(imgPath)) != NULL) {
+    while ((diread = readdir(dir)) != NULL) {
+      files.push_back(diread->d_name);
+    }
+    closedir (dir);
+  } else {
+    perror ("Directory not found!!");
+    exit(1);
+  }
+  return files;
 }
 #endif
