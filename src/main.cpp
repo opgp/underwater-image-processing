@@ -41,8 +41,7 @@ int main( int argc, char** argv ) {
   // EVALUATIONS
   // uiqm(output);
   // rEval();
-  ReferenceMetrics();
-
+  // ReferenceMetrics();
   waitKey(0);
   return 0;
 }
