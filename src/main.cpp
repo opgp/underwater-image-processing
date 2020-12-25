@@ -40,10 +40,8 @@ int main( int argc, char** argv ) {
 
   // EVALUATIONS
   // uiqm(output);
-  updateReferenceImage(imagePath, output);
   // rEval();
   ReferenceMetrics();
-
 
   waitKey(0);
   return 0;

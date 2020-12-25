@@ -54,22 +54,36 @@ void ReferenceMetrics()
     // "psnrb"
   };
 
-
   for (auto metric: metrics)
     cout << execute ("sewar " + metric + " " + reference + " " + original) << endl;
 }
 
-void updateReferenceImage(string path, string output)
-{
-  string imgName = extractImageName(path);
-  string referenceImage = "./dataset/reference/" + imgName;
-  execute ("cp " + referenceImage + " " + output + "reference.png");
-}
-
-
 string uiqm (string output)
 {
   return execute ("./UIQM " + output);
+}
+
+/*
+ Calculate UCIQE (Underwater Colour Image Quality Evaluation).
+
+ Usage
+      UCIQE_value = UCIQE(RGB_Image)
+   The implemented algorithm is based on the paper of M. Yang et al.:
+   An Underwater Color Image Quality Evaluation Metric.
+
+  Implemented by Z. J. Wang, UAV Lab, National University of Singapore
+  Sept. 2018
+  Modified at Dec. 2019
+*/
+double getUCIQE (string imgPath)
+{
+  Mat img = getImage(imgPath);
+
+  const double c1 = 0.4680;
+  const double c2 = 0.2745;
+  const double c3 = 0.2576;
+
+
 }
 
 #endif

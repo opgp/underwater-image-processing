@@ -56,6 +56,7 @@ vector <string> getFileNames (char* imgPath)
     perror ("Directory not found!!");
     exit(1);
   }
+  files.erase(files.begin(),files.begin()+2);
   return files;
 }
 #endif
