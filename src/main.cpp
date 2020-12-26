@@ -34,8 +34,8 @@ int main( int argc, char** argv ) {
        << duration.count()/1e6 << " seconds" << endl;
 
   // Show and write Final image
-  showImage("enhanced", image);
-
+ showImage("enhanced", image);
+ 
   // EVALUATIONS
   // uiqm(output);
   // rEval();
