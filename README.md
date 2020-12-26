@@ -66,3 +66,9 @@ ocv uciqe.cpp dataset/results/
 ```
 #### UQIM
 Coming Soon
+
+#### Thresholding 
+Run the following command to find Thresholding and Contour Drawings
+```
+ocv thresh.cpp imagepath
+```
